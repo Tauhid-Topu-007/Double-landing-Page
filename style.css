@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1{
+    font-size: 100px;
+    color: aliceblue;
+    backdrop-filter: brightness(0.5);
+    letter-spacing: 4px;
+}
+
+.btn{
+    background-color: black;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 25px;
+    border: 4px solod;
+    cursor: pointer;
+    transition: 1s background-color ;
+    white-space: nowrap;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #000;
+
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    background-color: pink;
+    background-image: url("https://images.unsplash.com/photo-1616410072514-e92114cf1a88?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+}
+.split.right{
+    position: absolute;
+    right: 0;
+    background-color: lightblue;
+    background-image: url("https://images.samsung.com/bd/smartphones/galaxy-s23-ultra/images/galaxy-s23-ultra-highlights-kv.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.active-left .left{
+    width: 75%;
+}
+
+.active-left .right{
+    width: 25%;
+}
+
+.active-right .left{
+    width: 25%;
+}
+
+.active-right .right{
+    width: 75%;
+}
+
+
+.left, .right{
+    transition: width 2s ease-in-out;
+}
